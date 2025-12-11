@@ -1,0 +1,144 @@
+Checking API Key configuration...
+API Key is set (Length: 39)
+API Key seems valid format (starts with: AIzaSy...)
+
+Testing CrewAI / Gemini Connection...
+Initializing LLM with model: gemini/gemini-1.5-flash
+Starting Crew execution...
+╭────────────────── Crew Execution Started ───────────────────╮
+│                                                             │
+│  Crew Execution Started                                     │
+│  Name: crew                                                 │
+│  ID: b0232442-aaa7-496e-9284-0d682e660684                   │
+│  Tool Args:                                                 │
+│                                                             │
+│                                                             │
+╰─────────────────────────────────────────────────────────────╯
+
+🚀 Crew: crew
+└── 📋 Task: b582e493-930d-421a-bc6e-56a3daca484a
+    Status: Executing Task...╭───────────────────── 🤖 Agent Started ──────────────────────╮
+│                                                             │
+│  Agent: Test Agent                                          │
+│                                                             │
+│  Task: Reply with exactly three words: 'Connection is       │
+│  working'.                                                  │
+│                                                             │
+╰─────────────────────────────────────────────────────────────╯
+
+
+ERROR:root:Google Gemini API error: 404 - models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+[91mAn unknown error occurred. Please check the details below.[0m
+[91mError details: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}[0m
+[91mAn unknown error occurred. Please check the details below.[0m
+[91mError details: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}[0m
+🚀 Crew: crew
+└── 📋 Task: b582e493-930d-421a-bc6e-56a3daca484a
+    Status: Executing Task...
+    └── ❌ LLM Failed╭───────────────────────── LLM Error ─────────────────────────╮
+│                                                             │
+│  ❌ LLM Call Failed                                         │
+│  Error: Google Gemini API error: 404 -                      │
+│  models/gemini-1.5-flash is not found for API version       │
+│  v1beta, or is not supported for generateContent. Call      │
+│  ListModels to see the list of available models and their   │
+│  supported methods.                                         │
+│                                                             │
+╰─────────────────────────────────────────────────────────────╯
+
+╭───────────────────── 🤖 Agent Started ──────────────────────╮
+│                                                             │
+│  Agent: Test Agent                                          │
+│                                                             │
+│  Task: Reply with exactly three words: 'Connection is       │
+│  working'.                                                  │
+│                                                             │
+╰─────────────────────────────────────────────────────────────╯
+ERROR:root:Google Gemini API error: 404 - models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+[91mAn unknown error occurred. Please check the details below.[0m
+[91mError details: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}[0m
+[91mAn unknown error occurred. Please check the details below.[0m
+[91mError details: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}[0m
+🚀 Crew: crew
+└── 📋 Task: b582e493-930d-421a-bc6e-56a3daca484a
+    Status: Executing Task...
+    ├── ❌ LLM Failed
+    └── ❌ LLM Failed╭───────────────────────── LLM Error ─────────────────────────╮
+│                                                             │
+│  ❌ LLM Call Failed                                         │
+│  Error: Google Gemini API error: 404 -                      │
+│  models/gemini-1.5-flash is not found for API version       │
+│  v1beta, or is not supported for generateContent. Call      │
+│  ListModels to see the list of available models and their   │
+│  supported methods.                                         │
+│                                                             │
+╰─────────────────────────────────────────────────────────────╯
+
+╭───────────────────── 🤖 Agent Started ──────────────────────╮
+│                                                             │
+│  Agent: Test Agent                                          │
+│                                                             │
+│  Task: Reply with exactly three words: 'Connection is       │
+│  working'.                                                  │
+│                                                             │
+╰─────────────────────────────────────────────────────────────╯
+
+ERROR:root:Google Gemini API error: 404 - models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+[91mAn unknown error occurred. Please check the details below.[0m
+[91mError details: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}[0m
+[91mAn unknown error occurred. Please check the details below.[0m
+[91mError details: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}[0m
+🚀 Crew: crew
+└── 📋 Task: b582e493-930d-421a-bc6e-56a3daca484a
+    Assigned to: Test Agent
+    Status: ❌ Failed
+    ├── ❌ LLM Failed
+    ├── ❌ LLM Failed
+    └── 🧠 Thinking...
+FAILURE! Error details:
+╭─────────────────────── Task Failure ────────────────────────╮
+│                                                             │
+│  Task Failed                                                │
+│  Name: b582e493-930d-421a-bc6e-56a3daca484a                 │
+│  Agent: Test Agent                                          │
+│  Tool Args:                                                 │
+│                                                             │
+│                                                             │
+╰─────────────────────────────────────────────────────────────╯
+404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}
+Error Type: ClientError
+
+╭─────────────────────── Crew Failure ────────────────────────╮
+│                                                             │
+│  Crew Execution Failed                                      │
+│  Name: crew                                                 │
+│  ID: b0232442-aaa7-496e-9284-0d682e660684                   │
+│  Tool Args:                                                 │
+│  Final Output:                                              │
+│                                                             │
+│                                                             │
+╰─────────────────────────────────────────────────────────────╯
+
+
+╭───────────────────────── LLM Error ─────────────────────────╮
+│                                                             │
+│  ❌ LLM Call Failed                                         │
+│  Error: Google Gemini API error: 404 -                      │
+│  models/gemini-1.5-flash is not found for API version       │
+│  v1beta, or is not supported for generateContent. Call      │
+│  ListModels to see the list of available models and their   │
+│  supported methods.                                         │
+│                                                             │
+╰─────────────────────────────────────────────────────────────╯
+
+╭────────────────────── Tracing Status ───────────────────────╮
+│                                                             │
+│  Info: Tracing is disabled.                                 │
+│                                                             │
+│  To enable tracing, do any one of these:                    │
+│  • Set tracing=True in your Crew/Flow code                  │
+│  • Set CREWAI_TRACING_ENABLED=true in your project's .env   │
+│  file                                                       │
+│  • Run: crewai traces enable                                │
+│                                                             │
+╰─────────────────────────────────────────────────────────────╯
