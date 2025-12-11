@@ -7,23 +7,30 @@ from datetime import datetime, timedelta
 # 🔧 Environment Setup for Streamlit Cloud
 # ---------------------------------------------------------
 # Load keys from Streamlit secrets if available (for production)
-if "GOOGLE_API_KEY" in st.secrets:
-    os.environ["GOOGLE_API_KEY"] = st.secrets["GOOGLE_API_KEY"]
+try:
+    if "GOOGLE_API_KEY" in st.secrets:
+        os.environ["GOOGLE_API_KEY"] = st.secrets["GOOGLE_API_KEY"]
 
-if "SERP_API_KEY" in st.secrets:
-    os.environ["SERP_API_KEY"] = st.secrets["SERP_API_KEY"]
+    if "SERP_API_KEY" in st.secrets:
+        os.environ["SERP_API_KEY"] = st.secrets["SERP_API_KEY"]
+except (FileNotFoundError, KeyError):
+    # Secrets not found (likely running locally), will rely on .env or os.environ
+    pass
+except Exception:
+    # Handle the specific StreamlitSecretNotFoundError which might not be importable directly
+    pass
 
 # Import backend logic directly (Monolithic Approach for easier deployment)
 try:
     from gemini2_travel_v2 import (
         complete_travel_search,
-        search_flights_endpoint,
-        search_hotels_endpoint,
+        get_flight_recommendations,
+        get_hotel_recommendations,
         FlightRequest,
         HotelRequest,
     )
-except ImportError:
-    st.error("Could not import backend logic. Ensure 'gemini2_travel_v2.py' is in the same directory.")
+except ImportError as e:
+    st.error(f"Could not import backend logic: {e}")
     st.stop()
 
 
@@ -115,10 +122,10 @@ async def run_search():
             result = await complete_travel_search(flight_request=flight_req, hotel_request=hotel_req)
         
         elif search_mode == "Flights Only":
-            result = await search_flights_endpoint(flight_request=flight_req)
+            result = await get_flight_recommendations(flight_request=flight_req)
             
         elif search_mode == "Hotels Only":
-            result = await search_hotels_endpoint(hotel_request=hotel_req)
+            result = await get_hotel_recommendations(hotel_request=hotel_req)
             
         return result
 
